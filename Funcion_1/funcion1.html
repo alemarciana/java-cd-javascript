@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        <!--Funcion 1-->
+        <script>
+        function a(){
+            return 35
+        }
+        console.log(a())
+        </script>
+        35
+        <!--Funcion 2-->
+        <script>
+        function a(){
+            return 4;
+        }
+        console.log(a()+a());
+        </script>
+        8
+        <!--Funcion 3-->
+        <script>
+        function a(b){
+            return b;
+        }
+        console.log(a(2)+a(4))
+        </script>
+        6
+        <!--Funcion 4-->
+        <script>
+        function a(b){
+            console.log(b);
+            return b*3;
+        }
+        console.log(a(3))
+        </script>
+        3
+        9
+        <!--Funcion 5-->
+        <script>
+        function a(b){
+            return b*4;
+            console.log(b);
+        }
+        console.log(a(10))
+        </script>
+        10
+        40
+        <!--Funcion 6-->
+        <script>
+        function a(b){
+            if(b<10) {
+                return 2;
+            }
+            else    {
+                return 4;
+            }
+            console.log(b);
+        }
+        console.log(a(15));
+        </script>
+        15
+        4
+        <!--Funcion 7-->
+        <script>
+        function a(b,c){
+            return b*c;
+        }
+        console.log(10,3);
+        console.log( a(3,10) )
+        </script>
+        10 3
+        30
+        <!--Funcion 8-->
+        <script>
+        function a(b){
+            for(var i=0; i<10;i++){
+                console.log(i)
+            }
+            return i
+        }
+        console.log(3);
+        console.log(4);
+        </script>
+        3
+        4
+        <!--Funcion 9-->
+        <script>
+
+        function a(){
+            for(var i=0; i<10; i++){
+                i = i +2;
+                console.log(i)
+            }
+        }
+        a()
+        </script>
+        2
+        5
+        8
+        11
+        <!--Funcion 10-->
+        <script>
+        function a(b,c) {
+            for(var i=b; i<c; i++) {
+                console.log(i)
+            }
+            return b*c
+        }
+        a(0,10);
+        console.log(a(0,10));
+        </script>
+        0
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        0
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        0
+        <!--Funcion 11-->
+        <script>
+        function a(){
+            for(var i=0; i<10; i++){
+                for(var j=0; j<10; j++){
+                    console.log(j);
+                }
+                console.log(i);
+            }
+        }
+        </script>
+        <!--Funcion 12-->
+        <script>
+        function a(){
+            for(var i=0; i<10; i++){
+                for(var j=0; j<10; j++){
+                    console.log(i,j);
+                }
+                console.log(j,i);
+            }
+        }
+        </script>
+        <!--Funcion 13-->
+        <script>
+        var z = 10;
+        function a(){
+            var z = 15;
+            console.log(z);
+        }
+        console.log(z);
+        </script>
+        10
+        <!--Funcion 14-->
+        <script>
+        var z = 10;
+        function a(){
+            var z=15;
+            console.log(z);
+        }
+        a();
+        console.log(z);
+        </script>
+        15
+        10
+        <!--funcion 15-->
+        <script>
+        var z = 10;
+        function a(){
+            var z = 15;
+            console.log(z);
+            return z;
+        }
+        z = a();
+        console.log(z);
+        </script>
+        15
+        15
+    </body>
+</html>
