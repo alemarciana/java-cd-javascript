@@ -23,17 +23,24 @@ function fibonacci(n){
 	}
 	else{
 		if (n==0){
-			return 0;
+			fib0 = 0;
+			return fib0;
 		}
 		if (n==1){
-			return 1;
+			fib1 = 1;
+			return fib1;
 		}
 		else {
-			return fibonacci(n-1)+fibonacci(n-2);
+			for (i=2;i<n;i++){
+				fib=fib0+fib1;
+				fib0=fib1;
+				fib1=fib;
+			}
+			return fib;
 		}
 	}
 }
-console.log(fibonacci(5));
+console.log(fibonacci(6));
 //// Ejercicio 4
 function sl(x){
 	if (x.length<2){
@@ -82,3 +89,21 @@ function db(x){
 	return y
 }
 console.log(db([2,"holi"]));
+//// Fibonacci Recursivo 
+function fibonacci(n){
+	if (n<0){
+		return null;
+	}
+	else {
+		if (n==0){
+			return 0;
+		}
+		else if (n==1){
+			return 1;
+		}
+		else {
+			return fibonacci(n-1)+fibonacci(n-2);
+		}
+	}
+}
+console.log(fibonacci(5));
