@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Pacman</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<!--<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="coin"></div>
+			<div class="brick"></div>
+		</div>
+		<div class="row">
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+			<div class="brick"></div>
+		</div>-->
+		<div id='world'></div>
+		<div id='pacman'></div>
+		<script>
+			var world = [
+				[2,2,22,2,2,2,2,2,2,2,2],
+				[2,1,1,1,1,1,1,1,1,1,1,2],
+				[2,1,1,1,1,1,1,1,1,1,1,2],
+				[2,1,1,1,1,1,1,1,1,1,1,2],
+				[2,1,1,1,1,1,1,1,1,1,1,2],
+				[2,1,1,1,1,1,1,1,1,1,1,2],
+				[2,1,1,1,1,1,1,1,1,1,1,2],
+				[2,1,1,1,1,1,1,0,1,1,1,2],
+				[2,1,1,1,1,1,1,1,1,1,1,2],
+				[2,2,2,2,2,2,2,2,2,2,2,2]
+			]
+			console.log(world[3][8])
+			function displayWorld(){
+				var output = '';
+				for (i=0;i<world.length;i++){
+					output += "<div class='row'>";
+					for (j=0;j<world[i].length;j++){
+						if ( world[i][j] === 2){
+							output += "<div class='brick'></div>";
+						}
+						else if (world[i][j] === 1){
+							output += "<div class='coin'></div>";
+						}
+						else {
+							output += "<div class='empty'></div>";
+						}
+					}
+					output += "\n</div>";
+				}
+///				console.log(output)
+				document.getElementById('world').innerHTML = output;
+			}
+			displayWorld();
+		</script>
+	</body>
+</html>

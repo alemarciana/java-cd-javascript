@@ -1,0 +1,29 @@
+*{
+	padding: 	0px;
+	margin: 	0px;
+}
+body {
+	background: gray;
+}
+.brick, .coin, .empty{
+	display:	inline-block;
+	outline:	black solid 1px;
+	height:		40px;
+	width:		40px;
+}
+.brick{
+	background-color:	blue;
+}
+.coin {
+	background:		url('coin.gif') center ;
+	background-size:	40px;
+	background-repeat:	no-repeat;
+}
+#pacman {
+	background:		url('pac.gif') center ;
+	background-size :	cover;
+	background-repeat:	no-repeat;
+	width:			40px;
+	height:			40px;
+}
+
