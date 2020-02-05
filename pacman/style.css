@@ -5,6 +5,9 @@
 body {
 	background: gray;
 }
+#container {
+	position:	relative;
+}
 .brick, .coin, .empty{
 	display:	inline-block;
 	outline:	black solid 1px;
@@ -24,6 +27,10 @@ body {
 	background-size :	cover;
 	background-repeat:	no-repeat;
 	width:			40px;
-	height:			40px;
+	height:			50px;
+	position:		absolute;
+	top:			45px;
+	left:			40px;
 }
+
 

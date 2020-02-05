@@ -66,11 +66,13 @@
 			<div class="brick"></div>
 			<div class="brick"></div>
 		</div>-->
-		<div id='world'></div>
-		<div id='pacman'></div>
+		<div id='container'>
+			<div id='world'></div>
+			<div id='pacman'></div>
+		</div>
 		<script>
 			var world = [
-				[2,2,22,2,2,2,2,2,2,2,2],
+				[2,2,2,2,2,2,2,2,2,2,2,2],
 				[2,1,1,1,1,1,1,1,1,1,1,2],
 				[2,1,1,1,1,1,1,1,1,1,1,2],
 				[2,1,1,1,1,1,1,1,1,1,1,2],
@@ -97,7 +99,7 @@
 							output += "<div class='empty'></div>";
 						}
 					}
-					output += "\n</div>";
+					output += "</div>";
 				}
 ///				console.log(output)
 				document.getElementById('world').innerHTML = output;
