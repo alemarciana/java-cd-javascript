@@ -8,6 +8,9 @@ body {
 #container {
 	position:	relative;
 }
+.row {
+	height:		40px;
+}
 .brick, .coin, .empty{
 	display:	inline-block;
 	outline:	black solid 1px;
@@ -24,13 +27,20 @@ body {
 }
 #pacman {
 	background:		url('pac.gif') center ;
-	background-size :	cover;
+	background-size :	90% 90%;
 	background-repeat:	no-repeat;
 	width:			40px;
-	height:			50px;
+	height:			40px;
 	position:		absolute;
-	top:			45px;
+	top:			40px;
 	left:			40px;
 }
-
-
+.pac_left{
+	transform:		rotate(180deg);
+}
+.pac_up{
+	transform:		rotate(-90deg);
+}
+.pac_down{
+	transform:		rotate(90deg);
+}

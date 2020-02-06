@@ -105,6 +105,48 @@
 				document.getElementById('world').innerHTML = output;
 			}
 			displayWorld();
+			var pacman = {
+				x:	40,
+				y:	40,
+				pos:	[0,0]
+			}
+			document.onkeydown = function(e){
+				if(e.keyCode == 37){
+					if(world[pacman.pos[0]] [pacman.pos[1]]-1 !== 2 && pacman.pos[1]-1>=0){
+						pacman.x-=40;
+						document.getElementById('pacman').classList.add("pac_left");
+						document.getElementById('pacman').classList.remove("pac_up","pac_down");
+						pacman.pos[0] -=1
+					}
+				}
+				else if(e.keyCode == 38){
+					if(world[pacman.pos[0]]-1 [pacman.pos[1]] !== 2){
+						pacman.y-=40;
+						document.getElementById('pacman').classList.add("pac_up");
+						document.getElementById('pacman').classList.remove("pac_left","pac_down");
+						pacman.pos[1] -=1
+					}
+				}
+				else if(e.keyCode == 39){
+					if(world[pacman.pos[0]][pacman.pos[1]]+1 !== 2){
+						pacman.x+=40;
+						document.getElementById('pacman').classList.remove("pac_up","pac_down","pac_left");
+						pacman.pos[0] +=1
+					}
+				}
+				else if(e.keyCode == 40){
+					if(world[pacman.pos[0]]+1[pacman.pos[1]] !== 2){
+						pacman.y+=40;
+						document.getElementById('pacman').classList.add("pac_down");
+						document.getElementById('pacman').classList.remove("pac_up","pac_left");
+						pacman.pos[0] +=1
+					}
+				}
+				document.getElementById('pacman').style.left = pacman.x+'px';
+				document.getElementById('pacman').style.top = pacman.y+'px';
+				console.log(e.keyCode);
+			}
+			
 		</script>
 	</body>
 </html>
