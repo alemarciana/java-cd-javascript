@@ -115,11 +115,11 @@
 				pos:	[1,1],
 				score:	0,
 			}
-//			var ghost = {
-//				x:	200,
-//				y:	80,
-//				pos:	[2,4],
-//			}
+			var ghost = {
+				x:	200,
+				y:	80,
+				pos:	[2,4],
+			}
 			function displayScore(){
 				document.getElementById('scoreboard').innerHTML = 'Score: '+pacman.score;
 			}
@@ -172,13 +172,33 @@
 				world[pacman.pos[1]][pacman.pos[0]] = 0;
 				displayWorld();
 				displayScore();
-//				gpos = Math.floor((Math.random() * 3) + 1 );
-//				if (gpos === 0){
-//					if(world[ghost.pos[1]+1][ghost.pos[0]] !==2){
-//						ghost.x-=40;
-//					}
-//				}
-//				document.getElementById('ghost').style.left = ghost.x+'px';
+				gpos = Math.floor((Math.random() * 4));
+				if (gpos === 0){
+					if(world[ghost.pos[1]-1][ghost.pos[0]] !==2){
+						ghost.x-=40;
+						ghost.pos[1]-=1;
+					}
+				}
+				if (gpos === 1){
+					if(world[ghost.pos[1]][ghost.pos[0]-1] !==2){
+						ghost.y-=40;
+						ghost.pos[0]-=1;
+					}
+				}
+				if (gpos === 2){
+					if(world[ghost.pos[1]+1][ghost.pos[0]] !==2){
+						ghost.x+=40;
+						ghost.pos[1]+=1;
+					}
+				}
+				if (gpos === 3){
+					if(world[ghost.pos[1]][ghost.pos[0]+1] !==2){
+						ghost.y+=40;
+						ghost.pos[0]+=1;
+					}
+				}
+				document.getElementById('ghost').style.left = ghost.x+'px';
+				document.getElementById('ghost').style.top = ghost.y+'px';
 			}
 			displayWorld();
 			world[pacman.pos[1]][pacman.pos[0]] = 0;
